@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .message {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="messages"></div>
+
+    <script>
+        const messages = [
+            "¡Hola! Este es un mensaje personalizado.",
+            "como estan los antisociales?.",
+            "Gracias por visitar nuestra página."
+        ];
+
+        const messagesContainer = document.getElementById('messages');
+        messages.forEach(msg => {
+            const div = document.createElement('div');
+            div.className = 'message';
+            div.textContent = msg;
+            messagesContainer.appendChild(div);
+        });
+    </script>
+</body>
+</html>
